@@ -23,5 +23,10 @@ Route::get('/showproduct', function () {
     return view('showproduct');
 });
 
+Route::get('/customer', function () {
+    return view('customer');
+});
+
 Route::post('/addproduct',[ProductController::class,'create'])->name('addproduct');
 Route::get('/showproduct',[ProductController::class,'show'])->name('showproduct');
+

@@ -43,6 +43,10 @@
                         <li class="list-group-item">
                             <a href="/showproduct" class="text-decoration-none d-block">🛒 Show Product</a>
                         </li>
+
+                        <li class="list-group-item">
+                            <a href="/customer" class="text-decoration-none d-block">🛒 Customer</a>
+                        </li>
                     </ul>
                 </div>
             </div>
