@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
@@ -30,3 +31,4 @@ Route::get('/customer', function () {
 Route::post('/addproduct',[ProductController::class,'create'])->name('addproduct');
 Route::get('/showproduct',[ProductController::class,'show'])->name('showproduct');
 
+Route::post('/customer',[CustomerController::class,'store'])->name('addcustomer');
