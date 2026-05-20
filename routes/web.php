@@ -32,3 +32,7 @@ Route::post('/addproduct',[ProductController::class,'create'])->name('addproduct
 Route::get('/showproduct',[ProductController::class,'show'])->name('showproduct');
 
 Route::post('/customer',[CustomerController::class,'store'])->name('addcustomer');
+Route::get('/customer',[CustomerController::class,'show'])->name('showcustomer');
+
+Route::put('/customer/{id}', [CustomerController::class, 'update'])->name('updatecustomer');
+Route::delete('/customer/{id}', [CustomerController::class, 'destroy'])->name('deletecustomer');

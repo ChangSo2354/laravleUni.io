@@ -18,4 +18,22 @@ class CustomerController extends Controller
         Customer::create($data);
         return redirect()->back();
     }
+
+    public function show() {
+        $customers = Customer::all();
+        return view('customer', compact('customers'));
+    }
+
+   public function update(Request $request, $id)
+{
+    $customer = Customer::findOrFail($id);
+    $customer->update($request->only(['name', 'address', 'phone', 'email']));
+    return redirect()->back()->with('success', 'Customer updated.');
+}
+
+public function destroy($id)
+{
+    Customer::findOrFail($id)->delete();
+    return redirect()->back()->with('success', 'Customer deleted.');
+}
 }
